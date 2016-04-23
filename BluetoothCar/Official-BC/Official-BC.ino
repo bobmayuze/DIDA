@@ -6,7 +6,7 @@ int Right_motor_back=11;    // 右电机后退(IN4)
 
 void setup()
 {
-  //初始化电机驱动IO为输出方式
+  //intialize the motors
   pinMode(Left_motor_go,OUTPUT); // PIN 8 (PWM)
   pinMode(Left_motor_back,OUTPUT); // PIN 9 (PWM)
   pinMode(Right_motor_go,OUTPUT);// PIN 10 (PWM) 
@@ -104,33 +104,23 @@ void back()          //后退
 
 void loop()
 {
-  // if (irrecv.decode(&results)) //调用库函数：解码
-  // {
-    // If it's been at least 1/4 second since the last
-    // IR received, toggle the relay
-    // if (millis() - last > 250) //确定接收到信号
-    // {
-    //   on = !on;//标志位置反
-    //   digitalWrite(13, on ? HIGH : LOW);//板子上接收到信号闪烁一下led
-    //   dump(&results);//解码红外信号
-    // }
     while(Serial.available())
     {  
 
     char c=Serial.read();
-    if (c == 'W' )//按键2
+    if (c == 'W' )//input W
       run();//前进
-    if (c == 'S' )//按键8
+    if (c == 'S' )//input S
       back();//后退
-    if (c == 'A' )//按键4
+    if (c == 'A' )//input A
       left();//左转
-    if (c == 'D' )//按键6
+    if (c == 'D' )//input D
       right();//右转
-    if (c == 'X' )//按键5
+    if (c == 'X' )//input X
       brake();//停车
-    if (c == 'Q' )//按键1
+    if (c == 'Q' )//input Q
       spin_left();//左旋转
-    if (c == 'E' )//按键3
+    if (c == 'E' )//input E
       spin_right();//右旋转
 
     }
