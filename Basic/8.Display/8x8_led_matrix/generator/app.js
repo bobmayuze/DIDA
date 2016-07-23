@@ -2,7 +2,7 @@ var app = angular.module('plunker', []);
 
 app.controller('MainCtrl', function($scope) {
 
-  $scope.name = 'Sprite Generator for LED MATRIX 8x8';
+  $scope.name = 'Generator for LED MATRIX 8x8';
 
   var ledButton = {
     value: '0',
@@ -56,7 +56,7 @@ app.controller('MainCtrl', function($scope) {
   };
 
   var generateCode = function() {
-    $scope.code = "byte sprite" + $scope.spriteName + "[] = {8, 8, ";
+    $scope.code = "byte sprite" + $scope.spriteName + "[] = {";
 
     angular.forEach($scope.ledMatrixRows, function(val, key) {
       var codePart = "B";
