@@ -13,7 +13,7 @@ app.controller('MainCtrl', function($scope) {
   var ledMatrixColumnsCount = 8;
   var ledMatrixRowsCount = 8;
 
-  $scope.spriteName = "Name";
+  $scope.spriteName = "";
   $scope.ledMatrixRows = [];
   $scope.code = "";
 
@@ -56,7 +56,7 @@ app.controller('MainCtrl', function($scope) {
   };
 
   var generateCode = function() {
-    $scope.code = "byte sprite" + $scope.spriteName + "[] = {";
+    $scope.code = "byte " + $scope.spriteName + "[] = {";
 
     angular.forEach($scope.ledMatrixRows, function(val, key) {
       var codePart = "B";
