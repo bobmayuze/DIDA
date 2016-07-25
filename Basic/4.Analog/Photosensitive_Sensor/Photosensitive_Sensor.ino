@@ -1,11 +1,8 @@
 void setup(){
-  Serial.begin(115200);
+  Serial.begin(9600);
   pinMode(A0, INPUT);
-  pinMode(13, OUTPUT);
-  digitalWrite(13, LOW);
 }
 
-int pr_min = 400;
 
 void loop(){
   int pr = analogRead(A0);
