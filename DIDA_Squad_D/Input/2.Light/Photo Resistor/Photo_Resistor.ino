@@ -10,7 +10,7 @@ void loop(){
   int sensorValue = analogRead(A0);
 
   Serial.println(sensorValue);
-  analogWrite(led,sensorValue/4);
+  analogWrite(led,sensorValue);
 
   delay(1000);
 }

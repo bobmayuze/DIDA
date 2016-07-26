@@ -21,6 +21,6 @@ void loop() {
   int sensorValue = analogRead(A0);
   // print out the value you read:
   Serial.println(sensorValue);
-  analogWrite(led,sensorValue/4);
+  analogWrite(led,sensorValue);
   delay(1);        // delay in between reads for stability
 }
