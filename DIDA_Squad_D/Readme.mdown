@@ -1,0 +1,7 @@
+# Dear Squard.D 
+
+Welcome to the wonderful world of Arduino. Here are the materials you will need during your developing progress. Pleases clone it to the local environment and start your mission.
+
+Have fun!
+
+Takahashi Takumi
