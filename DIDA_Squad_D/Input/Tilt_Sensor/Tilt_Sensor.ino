@@ -22,7 +22,7 @@
  This example code is in the public domain.
 
  http://www.arduino.cc/en/Tutorial/Button
- */
+*/
 
 // constants won't change. They're used here to
 // set pin numbers:
@@ -31,8 +31,10 @@ const int ledPin =  13;      // the number of the LED pin
 
 // variables will change:
 int buttonState = 0;         // variable for reading the pushbutton status
+bool ledState = 0;
 
 void setup() {
+  Serial.begin(9600);
   // initialize the LED pin as an output:
   pinMode(ledPin, OUTPUT);
   // initialize the pushbutton pin as an input:
@@ -46,11 +48,19 @@ void loop() {
   // check if the pushbutton is pressed.
   // if it is, the buttonState is HIGH:
   if (buttonState == HIGH) {
-    Serial.println(buttonState);
+    if(ledState == 0){
     // turn LED on:
-    digitalWrite(ledPin, HIGH);
-  } else {
-    // turn LED off:
     digitalWrite(ledPin, LOW);
+    delay(10);
+    }
+    else{
+    digitalWrite(ledPin,HIGH);
+    delay(10);
+    }
+  } 
+  if(buttonState == LOW){
+    // turn LED off:
+    ledState=!ledState;
+    delay(10);
   }
 }
