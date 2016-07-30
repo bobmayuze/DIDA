@@ -1,0 +1,11 @@
+Arduino uno板子
+需先现在程序后接线，否则会下载失败
+GPS模块VCC--------------Arduino的5v
+GPS模块GND--------------Arduino的GND
+GPS模块TXD--------------Arduino的10（数字IO  10）
+GPS模块RXD不接
+GPS模块PPS不接
+
+仅适用于UNO,NANO,PRO MINI，若使用leonardo或者mega2560等请参考Arduino官方SoftwareSerial说明：
+https://www.arduino.cc/en/Reference/SoftwareSerial
+https://www.arduino.cc/en/Tutorial/SoftwareSerialExample
