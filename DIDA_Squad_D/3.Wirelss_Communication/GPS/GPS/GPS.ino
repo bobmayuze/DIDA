@@ -14,7 +14,7 @@ void setup()	//初始化内容
 {
   GPSSerial.begin(9600);			//定义波特率9600，和我们店铺的GPS模块输出的波特率一致
   DEBUGSerial.begin(9600);
-  DEBUGSerial.println("ILoveMCU.taobao.com");
+  DEBUGSerial.println("Connecting to the DIDA_SPACE");
   DEBUGSerial.println("Wating...");
 }
 

@@ -13,7 +13,7 @@ void loop()
     char c=Serial.read();
      if(c=='A')
      {
-      Serial.println("Hellp I am BoooobMa");
+      Serial.println("Hello Suqad D!");
      }
 
     

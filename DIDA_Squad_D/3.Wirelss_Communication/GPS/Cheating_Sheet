@@ -1,0 +1,9 @@
+Arduino uno板
+
+需先现在程序后接线，否则容易下载失败
+
+GPS模块VCC--------------Arduino的5v
+GPS模块GND--------------Arduino的GND
+GPS模块TXD--------------Arduino的10（数字IO  10）
+GPS模块RXD不接
+GPS模块PPS不接
