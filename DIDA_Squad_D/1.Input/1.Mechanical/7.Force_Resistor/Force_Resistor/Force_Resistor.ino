@@ -12,5 +12,5 @@ void loop(){
   Serial.println(sensorValue);
   analogWrite(led,sensorValue);
 
-  delay(1000);
+  delay(100);
 }
